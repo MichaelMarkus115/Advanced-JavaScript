@@ -11,6 +11,7 @@ const theList = [
   ["one", "two"],
 ];
 
+
 theList.shift(); //removes first (Laurence)
 theList.pop();  //removes last (["one", "two"])
 

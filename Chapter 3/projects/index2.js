@@ -28,7 +28,7 @@ let item3 = {
 //Add all three items to the main array using push method
 inventory.push(item1, item2, item3);
 
-// Log the inventory array to the console
+//Log the inventory array to the console
 console.log("Inventory Array:");
 console.log(inventory);
 
@@ -36,7 +36,7 @@ console.log(inventory);
 console.log("\nQuantity of the third item:");
 console.log(inventory[2].quantity);
 
-// Adding and accessing more elements
+//Adding and accessing more elements
 let item4 = {
   name: 'Tablet',
   model: 'iPad Pro',
@@ -49,6 +49,6 @@ inventory.push(item4);
 console.log("\nUpdated Inventory Array with Item 4:");
 console.log(inventory);
 
-// Accessing other properties
+//Accessing other properties
 console.log("\nCost of the second item:");
 console.log(inventory[1].cost);
