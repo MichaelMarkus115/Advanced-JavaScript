@@ -8,4 +8,4 @@ const main = function counter(i) {
   return;
 };
 
-main(0);
+main(6);

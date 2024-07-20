@@ -1,17 +1,20 @@
 "use strict";
 
-const one  = ()=> console.log('one'); 
-const two  = ()=> console.log('two'); 
-
+const one = ()=> console.log('one'); 
+const two = ()=> console.log('two'); 
+// one();
+// two();
 const three = () =>{
     console.log('three'); 
-    one(); 
-    two(); 
+    two();
+    one();  
 };
+
+// three();
 
 const four = () =>{
     console.log('four');  
-    setTimeout(one,0); 
+    setTimeout(one,1000); 
     three();
 };
 
