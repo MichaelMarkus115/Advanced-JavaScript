@@ -168,17 +168,70 @@
 // let pos2 = poem.charAt(1000);
 // console.log(pos2);
 
-//CREATING SUBSTRINGS//
-let str = "Create a substring";
-let substr1 = str.slice(5);
-let substr2 = str.slice(0,3);
-console.log("1:", substr1);
-console.log("2:", substr2);
+// //CREATING SUBSTRINGS//
+// let str = "Create a substring";
+// let substr1 = str.slice(5);
+// let substr2 = str.slice(0,3);
+// console.log("1:", substr1);
+// console.log("2:", substr2);
 
-//REPLACING PARTS OF THE STRINGS//
-let hi = "Hi buddy";
-let new_hi = hi.replace("buddy", "Pascal");
-console.log(new_hi);
+// //REPLACING PARTS OF THE STRINGS//
+// let hi = "Hi buddy";
+// let new_hi = hi.replace("buddy", "Pascal");
+// console.log(new_hi);
 
-let new_hi2 = hi.replace("not there", "never there");
-console.log(new_hi2);
+// let new_hi2 = hi.replace("not there", "never there");
+// console.log(new_hi2);
+
+//8.4//
+// let val = "thIs will be capiTalized for each word";
+// function wordsCaps(str) {
+//     str = str.toLowerCase();
+//     let tempArr = [];
+//     let words = str.split(" ");
+//     words.forEach(word => {
+//         let temp = word.slice(0, 1).toUpperCase() + word.slice(1);
+//         tempArr.push(temp);
+//     });
+//     return tempArr.join(" ");
+// }
+// console.log(wordsCaps(val));
+
+// //8.5//
+// let val = "I love JavaScript";
+// val = val.toLowerCase();
+// let vowels = ["a","e","i","o","u"];
+// vowels.forEach((letter,index) =>{
+//     console.log(letter);
+//     val = val.replaceAll(letter,index);
+// });
+// console.log(val);
+
+
+// //8.6//
+// console.log(Math.PI);
+// console.log(Math.ceil(5.7));
+// console.log(Math.floor(5.7));
+// console.log(Math.round(5.7));
+// console.log(Math.random());
+// console.log(Math.floor(Math.random()*11)); // 0-10
+// console.log(Math.floor(Math.random()*10)+1); // 1-10;
+// console.log(Math.floor(Math.random()*100)+1); // 1-100;
+// function randomNumber(min, max) {
+//     return Math.floor(Math.random() * (max - min + 1)) + min;
+// };
+
+// for (let x = 0; x < 100; x++) {
+//     console.log(randomNumber(1, 100));
+// }
+
+
+// //8.7//
+// let future = new Date(2025, 5, 15);
+// console.log(future);
+// let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+// let day = future.getDate();
+// let month = future.getMonth();
+// let year = future.getFullYear();
+// let myDate = `${months[month-1]} ${day} ${year}`;
+// console.log(myDate);
