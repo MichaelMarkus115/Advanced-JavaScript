@@ -135,21 +135,64 @@
 // })
 
 //////////////////////////11.3////////////////////////////
-document.addEventListener("DOMContentLoaded", (e) => {
-  message("Document Ready", e); 
-});
+// document.addEventListener("DOMContentLoaded", (e) => {
+//   message("Document Ready", e);
+// });
 
-window.onload = (e) => {
-  message("Window Ready", e);
-};
+// window.onload = (e) => {
+//   message("Window Ready", e);
+// };
 
-function message(string, event) {
-  console.log(event);
-  console.log(string);
-};
+// function message(string, event) {
+//   console.log(event);
+//   console.log(string);
+// };
 
 //////////////////////////11.4////////////////////////////
-
+// const output = document.querySelector(".output");
+// output.textContent = "hello world";
+// output.style.height = "200px";
+// output.style.width = "400px";
+// output.style.backgroundColor = "red";
+// output.addEventListener("mousedown", function (e) {
+//   message("green", e);
+// });
+// output.addEventListener("mouseover", function (e) {
+//   message("red", e);
+// });
+// output.addEventListener("mouseout", function (e) {
+//   message("yellow", e);
+// });
+// output.addEventListener("mouseup", function (e) {
+//   message("blue", e);
+// });
+// function message(elColor, event) {
+//   console.log(event.type);
+//   output.style.backgroundColor = elColor;
+// }
 //////////////////////////11.5////////////////////////////
-
+const myInput = document.querySelector(".message");
+const output = document.querySelector(".output");
+const btn1 = document.querySelector(".btn1");
+const btn2 = document.querySelector(".btn2");
+const btn3 = document.querySelector(".btn3");
+const log = [];
+btn1.addEventListener("click", tracker);
+btn2.addEventListener("click", tracker);
+btn3.addEventListener("click", (e) => {
+  console.log(log);
+});
+function tracker(e) {
+  output.textContent = myInput.value;
+  const ev = e.target;
+  console.dir(ev);
+  const temp = {
+    message: myInput.value,
+    type: ev.type,
+    class: ev.className,
+    tag: ev.tagName,
+  };
+  log.push(temp);
+  myInput.value = "";
+}
 //////////////////////////11.6////////////////////////////
