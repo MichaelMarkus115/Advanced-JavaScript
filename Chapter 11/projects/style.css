@@ -1,0 +1,26 @@
+/*project 1*/
+.box {
+  width: 200px;
+  height: 100px;
+  border: 1px solid black;
+};
+
+/*Project 2*/
+.stars ul {
+    list-style-type: none;
+    padding: 0px;
+};
+
+.star {
+    font-size: 2em;
+    color: #ddd;
+    display: inline-block;
+};
+
+.orange {
+    color: orange;
+};
+
+.output {
+    background-color: #ddd;
+}
