@@ -14,6 +14,7 @@ function scramble(val) {
         val = val.substr(0, index) + val.substr(index + 1);
         console.log(val);
     };
+    
     return temp;
 };
 
