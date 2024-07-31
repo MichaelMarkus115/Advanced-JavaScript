@@ -18,6 +18,9 @@ function lookUp() {
   area2.value = mail.join(",");
 }
 
+string1 = ["Michael", "van den Berg"];
+
+
 // let area1 = document.querySelector(".text1");
 // let area2 = document.querySelector(".text2");
 // document.querySelector("button").addEventListener("click", lookUp);

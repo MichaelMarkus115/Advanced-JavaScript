@@ -29,7 +29,36 @@
         border: 1px solid black;
       } */
 
-      canvas {
+      /* canvas {
+        border: 1px solid black;
+      } */
+
+      /*Project 2*/
+      /* .clock {
+        background-color: blue;
+        width: 400px;
+        text-align: center;
+        color: white;
+        font-size: 1em;
+      }
+      .clock > span {
+        padding: 10px;
+        border-radius: 10px;
+        background-color: black;
+      }
+      .clock > span > span {
+        padding: 5px;
+        border-radius: 10px;
+        background-color: red;
+      }
+      input {
+        padding: 15px;
+        margin: 20px;
+        font-size: 1.5em;
+      } */
+
+      /*Project 3*/
+      #canvas {
         border: 1px solid black;
       }
     </style>
@@ -65,10 +94,32 @@
     <br />
     <canvas id="canvas"></canvas> -->
 
-    <canvas id="canvas"></canvas>
+    <!-- <canvas id="canvas"></canvas>
     <input type="color" id="bgColor" />
-    
+     -->
 
+    <!--Project 1-->
+    <!-- <div class = "output"></div> -->
+
+    <!--Project 2-->
+    <!-- <div>
+      <input type="date" name="endDate">
+      <div class="clock"> <span><span class="days">0</span> Days</span> <span><span class="hours">0</span>
+              Hours</span> <span><span class="minutes">0</span> Minutes</span> <span><span class="seconds">0</span>
+              Seconds</span>
+      </div> -->
+
+    <!--Project 3-->
+    <canvas id="canvas" width="600" height="400"></canvas>
+    <div>
+      <button class="save">Save</button>
+      <button class="clear">clear</button>
+      <span>Color: <input type="color" value="#ffff00" id="penColor" /></span>
+      <span
+        >Width: <input type="range" min="1" max="20" value="10" id="penWidth"
+      /></span>
+    </div>
+    <div class="output"></div>
     <script src="index.js"></script>
   </body>
 </html>
