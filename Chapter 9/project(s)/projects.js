@@ -1,16 +1,16 @@
 "use strict";
 
-const output = document.querySelector(".output");
-const mainList = output.querySelector("ul");
+let output = document.querySelector(".output");
+let mainList = output.querySelector("ul");
 mainList.id = "mainList";
 console.log(mainList);
-const eles = document.querySelectorAll("div");
-for (let x = 0; x < eles.length; x++) {
-  console.log(eles[x].tagName);
-  eles[x].id = "id" + (x + 1);
-  if (x % 2) {
-    eles[x].style.color = "red";
+let eles = document.querySelectorAll("div");
+for (let i = 0; i < eles.length; i++) {
+  console.log(eles[i].tagName);
+  eles[i].id = "id" + (i + 1);
+  if (i % 2) {
+    eles[i].style.color = "red";
   } else {
-    eles[x].style.color = "blue";
+    eles[i].style.color = "blue";
   }
 }

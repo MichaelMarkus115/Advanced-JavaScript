@@ -51,25 +51,25 @@
 // your guests array list using a for of loop to return  if the person is allowed in.
 // use an alert to give the result.
 
-let guestList = ["Michael", "Alex", "Bhabha", "Jada", "Mike", "Harvey", "Louis", "Donna", "Jessica", "Robert"];
+// let guestList = ["Michael", "Alex", "Bhabha", "Jada", "Mike", "Harvey", "Louis", "Donna", "Jessica", "Robert"];
 
-let p_name = prompt("What is your name?");
+// let p_name = prompt("What is your name?");
 
-function allowed(naam) {
-    for (let guest of guestList) {
-        if (guest.toLowerCase() === naam.toLowerCase()) {
-            return true;
-        } else if (naam = " " || naam != isNaN) {
-            return false;
-        }
-    };
-};
+// function allowed(naam) {
+//     for (let guest of guestList) {
+//         if (guest.toLowerCase() === naam.toLowerCase()) {
+//             return true;
+//         } else {
+//             return false;
+//         }
+//     };
+// };
 
-if (allowed(p_name)) {
-    alert(`Welcome ${p_name.toLowerCase()}`);
-} else {
-    alert(`You are not allowed ${p_name.toLowerCase()}`);
-}
+// if (allowed(p_name)) {
+//     alert(`Welcome ${p_name.toLowerCase()}`);
+// } else {
+//     alert(`You are not allowed ${p_name.toLowerCase()}`);
+// }
 
 // let guestNames = ["Michael", "Alex", "Bhabha", "Jada", "Mike", "Harvey", "Louis", "Donna", "Jessica", "Robert"];
 
@@ -169,3 +169,42 @@ if (allowed(p_name)) {
 
 // console.dir(window.navigator);
 
+// let nr1 = 4;
+// console.log(nr1++);
+
+// let addresses = [
+//   {
+//     street: "2nd street",
+//     number: "123",
+//     zipcode: "33116",
+//     city: "Miami",
+//     state: "Florida",
+//   },
+//   {
+//     street: "1st West avenue",
+//     number: "5",
+//     zipcode: "75001",
+//     city: "Addison",
+//     state: "Texas",
+//   },
+// ];
+
+// console.log(addresses[1]["city"])
+
+// (function () {
+//   console.log("Let's play ");
+// })();
+// (function () {
+//   return "Chess and";
+// })();
+// let result = (function () {
+//   let game2 = "Dominoes";
+//   return game2;
+// })();
+// console.log(result);
+// (function (score) {
+//   console.log("My score was " + score);
+// })(100);
+
+// let test = (num) => {num * 2};
+// console.log(test(14));
