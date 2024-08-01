@@ -28,10 +28,12 @@
 // let starsUL = document.querySelector(".stars");
 // let output = document.querySelector(".output");
 // let stars = document.querySelectorAll(".star");
+
 // stars.forEach((star, index) => {
 //   star.starValue = index + 1;
 //   star.addEventListener("click", starRate);
 // });
+
 // function starRate(e) {
 //   output.innerHTML = `You Rated this ${e.target.starValue} stars`;
 //   stars.forEach((star, index) => {
@@ -53,41 +55,44 @@
 // function coordin() {
 //     let html = "X:" + event.clientX + " | Y:" + event.clientY;
 //     document.getElementById("output").innerHTML = html;
-// }
+// };
 
 //Project 4
-// let output = document.querySelector(".output");
-// let message = document.querySelector(".message");
-// message.textContent = "Press to Start The Game";
-// let box = document.createElement("div");
-// let game = {
-//   timer: 0,
-//   start: null,
-// };
-// box.classList.add("box");
-// output.append(box);
+let output = document.querySelector(".output");
+let message = document.querySelector(".message");
+message.textContent = "Press to Start The Game";
 
-// box.addEventListener("click", (e) => {
-//   box.textContent = "";
-//   box.style.display = "none";
-//   game.timer = setTimeout(addBox, ranNum(3000));
-//   if (!game.start) {
-//     message.textContent = "Loading....";
-//   } else {
-//     let current = new Date().getTime();
-//     let duration = (current - game.start) / 1000;
-//     message.textContent = `It took ${duration} seconds to click`;
-//   }
-// });
+let box = document.createElement("div");
 
-// function addBox() {
-//   message.textContent = "Click it!";
-//   game.start = new Date().getTime();
-//   box.style.display = "block";
-//   box.style.left = ranNum(450) + "px";
-//   box.style.top = ranNum(450) + "px";
-// }
+let game = {
+  timer: 0,
+  start: null,
+};
 
-// function ranNum(max) {
-//   return Math.floor(Math.random() * max);
-// }
+box.classList.add("box");
+output.append(box);
+
+box.addEventListener("click", (e) => {
+  box.textContent = "";
+  box.style.display = "none";
+  game.timer = setTimeout(addBox, ranNum(3000));
+  if (!game.start) {
+    message.textContent = "Loading....";
+  } else {
+    let current = new Date().getTime();
+    let duration = (current - game.start) / 1000;
+    message.textContent = `It took ${duration} seconds to click`;
+  }
+});
+
+function addBox() {
+  message.textContent = "Click it!";
+  game.start = new Date().getTime();
+  box.style.display = "block";
+  box.style.left = ranNum(450) + "px";
+  box.style.top = ranNum(450) + "px";
+}
+
+function ranNum(max) {
+  return Math.floor(Math.random() * max);
+};

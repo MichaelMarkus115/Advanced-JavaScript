@@ -1,6 +1,6 @@
 "use strict";
 
-// //project 1
+//project 1
 // let menus = document.querySelectorAll(".title");
 // let openText = document.querySelectorAll(".myText");
 // menus.forEach((el) => {
@@ -10,6 +10,7 @@
 //     el.nextElementSibling.classList.toggle("active");
 //   });
 // });
+
 // function remover() {
 //   openText.forEach((ele) => {
 //     ele.classList.remove("active");
@@ -75,15 +76,15 @@ function startGame() {
     builder();
   } else {
     score.textContent = "No More Words.";
-  };
-};
+  }
+}
 function createElements(elType, parentEle, output, cla) {
   let temp = document.createElement(elType);
   temp.classList.add("boxE");
   parentEle.append(temp);
   temp.textContent = output;
   return temp;
-};
+}
 
 function updateScore() {
   score.textContent = `Total Letters Left : ${game.total}`;
@@ -91,8 +92,8 @@ function updateScore() {
     console.log("game over");
     score.textContent = "Game Over";
     btn.style.display = "block";
-  };
-};
+  }
+}
 
 function builder() {
   letters.innerHTML = "";
@@ -104,7 +105,7 @@ function builder() {
       div.textContent = " ";
     } else {
       game.total++;
-    };
+    }
     game.puzz.push(div);
     updateScore();
   });
@@ -120,8 +121,8 @@ function builder() {
       checkLetter(temp);
     };
     div.addEventListener("click", checker);
-  };
-};
+  }
+}
 
 function checkLetter(letter) {
   console.log(letter);
@@ -130,6 +131,6 @@ function checkLetter(letter) {
       game.puzz[index].textContent = letter;
       game.total--;
       updateScore();
-    };
+    }
   });
 }
