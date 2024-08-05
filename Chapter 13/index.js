@@ -80,7 +80,7 @@
 //   }
 // );
 
-// const promise = new Promise((resolve, reject) => {
+// let promise = new Promise((resolve, reject) => {
 //   resolve("success!");
 // })
 //   .then((value) => {
@@ -106,7 +106,7 @@
 //     console.log(value);
 //   });
 
-// const promise = new Promise((resolve, reject) => {
+// let promise = new Promise((resolve, reject) => {
 //   reject("oops... ");
 // })
 //   .then((value) => {
@@ -140,7 +140,7 @@
 //   });
 // }
 // async function talk(x) {
-//   const words = await saySomething(x);
+//   let words = await saySomething(x);
 //   console.log(words);
 // }
 // talk(2);
@@ -212,7 +212,7 @@
 //     return new Promise(resolve => {
 //         setTimeout(() => {
 //             count++;
-//             resolve(`x value ${val} counter: ${count}`);    
+//             resolve(`x value ${val} counter: ${count}`);
 //         }, 1000);
 //     });
 // };
@@ -227,4 +227,37 @@
 //     aCall(i);
 // }
 
+//project 1//
+let allowed = ["1234", "pass", "apple"];
 
+function passwordChecker(pass) {
+  return allowed.includes(pass);
+}
+
+function login(password) {
+  return new Promise((resolve, reject) => {
+    if (passwordChecker(password)) {
+      resolve({
+        status: true,
+      });
+    } else {
+      reject({
+        status: false,
+      });
+    }
+  });
+}
+
+function checker(pass) {
+  login(pass)
+    .then((token) => {
+      console.log("Approve:");
+      console.log(token);
+    })
+    .catch((value) => {
+      console.log("Reject:");
+      console.log(value);
+    });
+}
+checker("1234");
+checker("wrong");

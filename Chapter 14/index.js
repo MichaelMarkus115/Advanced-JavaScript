@@ -1,6 +1,6 @@
-"use strcit";
+// "use strcit";
 
-///////////////LOCAL FILE STORAGE///////////////////
+// ///////////////LOCAL FILE STORAGE///////////////////
 // let message = document.getElementById("message");
 // if (window.FileReader) {
 //   message.innerText = "Good to go!";
@@ -14,7 +14,7 @@
 //   message.innerText = files[0].name;
 // }
 
-//UPLOADING FILES//
+// UPLOADING FILES//
 // let message = document.getElementById("message");
 // function uploadFile(files) {
 //   for (let i = 0; i < files.length; i++) {
@@ -22,7 +22,7 @@
 //   }
 // }
 
-//READING FILES//
+// READING FILES//
 // let message = document.getElementById("message");
 // function uploadAndReadFile(files) {
 //   let fr = new FileReader();
@@ -32,7 +32,7 @@
 //   fr.readAsText(files[0]);
 // }
 
-//GETTING POSITION DATA WITH GeoLocation
+// GETTING POSITION DATA WITH GeoLocation
 // window.onload = init;
 // function init() {
 // console.dir(navigator.geolocation);
@@ -161,11 +161,11 @@
 //   bgColor = event.target.value;
 // });
 
-//////Project 1/////////
+// ////Project 1/////////
 // let canvas = document.createElement("canvas");
-// let ctx = canvas.getContext("2d");
+// let ctx = canvas.getContext("2d");  
 // canvas.setAttribute("width", "500");
-// canvas.setAttribute("height", "300");
+// canvas.setAttribute("height", "400");
 // document.body.prepend(canvas);
 // let colVal = [];
 // for (let x = 0; x < 50; x++) {
@@ -179,7 +179,7 @@
 //     let output = Math.random() < 0.5 ? 0 : 1;
 //     let posX = index * 10 + 10;
 //     ctx.fillText(output, posX, posY);
-//     if (posY > 100 + Math.random() * 300) {
+//     if (posY > 100 + Math.random() * 400) {
 //       colVal[index] = 0;
 //     } else {
 //       colVal[index] = posY + 10;
@@ -188,12 +188,12 @@
 // }
 // setInterval(matrix, 50);
 
-//Project 2//
-// const endDate = document.querySelector("input[name='endDate']");
-// const clock = document.querySelector(".clock");
+// Project 2//
+// let endDate = document.querySelector("input[name='endDate']");
+// let clock = document.querySelector(".clock");
 // let timeInterval;
 // let timeStop = true;
-// const savedValue = localStorage.getItem("countdown") || false;
+// let savedValue = localStorage.getItem("countdown") || false;
 // if (savedValue) {
 //   startClock(savedValue);
 //   let inputValue = new Date(savedValue);
@@ -202,7 +202,7 @@
 // endDate.addEventListener("change", function (e) {
 //   e.preventDefault();
 //   clearInterval(timeInterval);
-//   const temp = new Date(endDate.value);
+//   let temp = new Date(endDate.value);
 //   localStorage.setItem("countdown", temp);
 //   startClock(temp);
 //   timeStop = true;
@@ -243,15 +243,15 @@
 //   };
 // }
 
-//Project 3
-const canvas = document.querySelector("#canvas");
-const ctx = canvas.getContext("2d");
-const penColor = document.querySelector("#penColor");
-const penWidth = document.querySelector("#penWidth");
-const btnSave = document.querySelector(".save");
-const btnClear = document.querySelector(".clear");
-const output = document.querySelector(".output");
-const mLoc = {
+// Project 3
+let canvas = document.querySelector("#canvas");
+let ctx = canvas.getContext("2d");
+let penColor = document.querySelector("#penColor");
+let penWidth = document.querySelector("#penWidth");
+let btnSave = document.querySelector(".save");
+let btnClear = document.querySelector(".clear");
+let output = document.querySelector(".output");
+let mLoc = {
   draw: false,
   x: 0,
   y: 0,
@@ -279,12 +279,12 @@ canvas.addEventListener("mouseout", (e) => {
   mLoc.draw = false;
 });
 function saveImg() {
-  const dataURL = canvas.toDataURL();
+  let   dataURL = canvas.toDataURL();
   console.log(dataURL);
-  const img = document.createElement("img");
+  let   img = document.createElement("img");
   output.prepend(img);
   img.setAttribute("src", dataURL);
-  const link = document.createElement("a");
+  let   link = document.createElement("a");
   output.append(link);
   let fileName = Math.random().toString(16).substr(-8) + ".png";
   link.setAttribute("download", fileName);
@@ -309,3 +309,41 @@ function draw() {
     ctx.closePath();
   }
 }
+
+
+// //Local file reader//
+// let message = document.getElementById("message");
+// if (window.FileReader) {
+//   message.innerHTML = "Good to go!";
+// } else {
+//   message.innerHTML = "No File Reader";
+// };
+
+// Uploading Files//
+// let message = document.getElementById("message");
+
+// function uploadFiles(files) {
+//   console.log(files[0]);
+//   message.innerHTML = files[0].name;
+// };
+
+// let message = document.getElementById("message");
+
+// function uploadFile(files) {
+//   for (let i = 0; i < files.length; i++) {
+//     message.innerHTML += files[i].name + "<br>";
+//   }
+// }
+
+// Reading Files//
+// let message = document.getElementById("message");
+
+// function uploadAndReadFile(files) {
+//   let fr = new fileRader();
+//   fr.onload = function (e) {
+//     message.innerHTML = e.target.result;
+//   };
+//   fr.readAsText(files[0]);
+// }
+
+// //14.1//
